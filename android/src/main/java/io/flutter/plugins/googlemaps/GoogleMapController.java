@@ -722,7 +722,9 @@ final class GoogleMapController
 
   public void setTrafficEnabled(boolean trafficEnabled) {
     this.trafficEnabled = trafficEnabled;
-//     this.googleMap.setTrafficEnabled(this.trafficEnabled);
+    if (this.googleMap != null) {
+      this.googleMap.setTrafficEnabled(this.trafficEnabled);
+    }
   }
 
   public void setBuildingsEnabled(boolean buildingsEnabled) {
